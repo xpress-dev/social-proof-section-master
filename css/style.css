@@ -1,0 +1,195 @@
+/* Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 400, 500, 700
+ */
+
+:root {
+  /* Colors */
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --gray-magenta: hsl(303, 10%, 53%);
+  --light-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  /* Font Weight */
+  --fw-light: 400;
+  --fw-normal: 500;
+  --fw-bold: 700;
+  /* Font Family */
+  --font-family: "League Spartan", sans-serif;
+}
+
+body {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: 0 0, bottom 0 right 0;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 20rem;
+}
+
+.heading {
+  color: var(--dark-magenta);
+  padding: 2rem 2rem 0 2rem;
+}
+
+.descriptions {
+  line-height: 1.2;
+  color: var(--gray-magenta);
+}
+
+.review {
+  background-color: var(--light-magenta);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  height: 3rem;
+}
+
+.review p {
+  font-weight: var(--fw-bold);
+  color: var(--dark-magenta);
+}
+
+.cards {
+  margin: 3rem 0;
+}
+
+.card {
+  background-color: var(--dark-magenta);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-details p {
+  margin-block-start: 0.3rem;
+  margin-block-end: 0;
+}
+
+.card-descriptions {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.verified {
+  color: var(--soft-pink);
+  font-weight: var(--fw-light);
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 2rem;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    align-items: flex-start;
+    min-height: auto;
+    height: 80vh;
+    overflow: hidden;
+    padding: 6.5rem;
+    position: relative;
+  }
+  main {
+    width: 65rem;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    gap: 10rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .descriptions {
+    font-size: 1rem;
+  }
+
+  .heading,
+  .descriptions {
+    text-align: left;
+    padding: 0;
+  }
+
+  .review-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+  }
+
+  .one {
+    transform: translateX(-6rem);
+  }
+
+  .two {
+    transform: translateX(-3rem);
+  }
+  .review {
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    width: 22.5rem;
+    gap: 1rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .cards {
+    transform: translateY(3rem);
+  }
+
+  .second {
+    transform: translateY(1rem);
+  }
+
+  .third {
+    transform: translateY(2rem);
+  }
+}
